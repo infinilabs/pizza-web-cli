@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "module": "commonjs", // 或者 "esnext"
+    "target": "es5",
+    "esModuleInterop": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "resolveJsonModule": true, // 如果你导入了 JSON 文件
+    "skipLibCheck": true,
+    "noEmit": true,
+    "jsx": "react-jsx", // 或 "react-jsx" 取决于你使用的 JSX 版本
+    "types": ["react", "node"], // 确保包含 'react'
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitAny": true,
+    "lib": ["esnext", "dom"],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src/components/**/*"],
+  "exclude": ["node_modules"]
+}
