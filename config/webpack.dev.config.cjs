@@ -6,8 +6,9 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: path.join(__dirname, "../src/main"), // 项目入口，处理资源文件的依赖关系
+  entry: path.join(__dirname, "../src/main.jsx"), // 项目入口，处理资源文件的依赖关系
   output: {
+    publicPath: '/',
     filename: "bundle.js",
     path: path.join(__dirname, "../lib"),
   },

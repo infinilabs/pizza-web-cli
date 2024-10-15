@@ -3,7 +3,6 @@
 import { useMemo } from "react";
 import { Icon } from "antd";
 
-import { generateIcon } from "./providers";
 import ElasticImg from "../Icon/elasticsearch.svg";
 import EasysearchImg from "../Icon/easysearch.svg";
 import OpenSearchImg from "../Icon/opensearch.svg";
@@ -12,6 +11,10 @@ export const SearchEngines = {
   Elasticsearch: "elasticsearch",
   Opensearch: "opensearch",
   Easysearch: "easysearch",
+};
+
+export const generateIcon = (width, height, src) => {
+  return () => <img height={height} width={width} src={src} />;
 };
 
 export const SearchEngineIcon = ({
