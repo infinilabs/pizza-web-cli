@@ -73,7 +73,7 @@ module.exports = {
     port: 3002,
     open: true,
     proxy: {
-      "/elasticsearch/": {
+      "/pizza/": {
         target: "http://infini.internal:9000",
         changeOrigin: true,
         //  pathRewrite: { '^/server': '' },
