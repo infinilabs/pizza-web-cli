@@ -3,14 +3,10 @@
 import { useMemo } from "react";
 import { Icon } from "antd";
 
-import ElasticImg from "../Icon/elasticsearch.svg";
-import EasysearchImg from "../Icon/easysearch.svg";
-import OpenSearchImg from "../Icon/opensearch.svg";
+import PizzaImg from "../Icon/pizza.svg";
 
 export const SearchEngines = {
-  Elasticsearch: "elasticsearch",
-  Opensearch: "opensearch",
-  Easysearch: "easysearch",
+  Pizza: "pizza",
 };
 
 export const generateIcon = (width, height, src) => {
@@ -22,32 +18,23 @@ export const SearchEngineIcon = ({
   width = "24px",
   height = "24px",
 }) => {
-  const [elasticsearchIcon, easysearchIcon, opensearchIcon] = useMemo(() => {
+  const [pizzaIcon] = useMemo(() => {
     return [
-      generateIcon(width, height, ElasticImg),
-      generateIcon(width, height, EasysearchImg),
-      generateIcon(width, height, OpenSearchImg),
+      generateIcon(width, height, PizzaImg),
     ];
   }, [width, height]);
   switch (distribution) {
-    case SearchEngines.Easysearch:
+    case SearchEngines.Pizza:
       return (
         <Icon
-          component={easysearchIcon}
-          style={{ width: width, height: height, verticalAlign: "middle" }}
-        />
-      );
-    case SearchEngines.Opensearch:
-      return (
-        <Icon
-          component={opensearchIcon}
+          component={pizzaIcon}
           style={{ width: width, height: height, verticalAlign: "middle" }}
         />
       );
     default:
       return (
         <Icon
-          component={elasticsearchIcon}
+          component={pizzaIcon}
           style={{ width: width, height: height, verticalAlign: "middle" }}
         />
       );
