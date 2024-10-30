@@ -13,6 +13,7 @@
   "dependencies": {
     "@infinilabs/ui-web-cli": "^0.0.15",
     "antd": "3.26.18",
+    "pizza-wasm": "file:../pizza-wasm/pkg",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   },

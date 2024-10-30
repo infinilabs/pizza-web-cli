@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import ConsoleUI from "@infinilabs/ui-web-cli";
+import { Pizza } from "pizza-wasm";
+import { memory } from "pizza-wasm/pizza_wasm_bg";
 
 // 图标组件，可以按照这个示例修改
 import { SearchEngineIcon } from "./components/lib/search_engines";
 // 左上角的 logo 组件
 import PizzaImg from "./components/Icon/pizza"
+
+// Construct the pizza engine
+const pizza = Pizza.new();
 
 function App() {
   const clusterList = [];
